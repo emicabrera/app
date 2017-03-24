@@ -13,8 +13,8 @@ Public Class getCoordenadas
             Dim dt As DataTable = d.GetTable(0)
             For i = 0 To dt.Rows.Count - 1
                 Dim item As New Musico
-                item.latitud = dt.Rows(i)("usu_lat")
-                item.longitud = dt.Rows(i)("usu_lng")
+                item.latitud = Replace(dt.Rows(i)("usu_lat"), ",", ".")
+                item.longitud = Replace(dt.Rows(i)("usu_lng"), ",", ".")
                 R.list.Add(item)
             Next
         Catch ex As Exception

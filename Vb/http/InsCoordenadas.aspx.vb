@@ -17,8 +17,8 @@ Public Class InsCoordenadas
         Try
             Dim d As New Db("USUARIO_COORDENADA_UPD")
             d.addParameter("@USU_ID", USU_ID)
-            d.addParameter("@USU_LAT", USU_LAT)
-            d.addParameter("@USU_LNG", USU_LNG)
+            d.addParameter("@USU_LAT", Replace(USU_LAT, ",", "."))
+            d.addParameter("@USU_LNG", Replace(USU_LNG, ",", "."))
             d.DataSetFill()
         Catch ex As Exception
             R.success = False
