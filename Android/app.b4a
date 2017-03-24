@@ -1,12 +1,71 @@
 ﻿Version=6.5
-NumberOfModules=1
+NumberOfModules=3
 Module1=Starter
+Module2=googlemap
+Module3=trilibs
 Build1=Default,b4a.example
 ManifestCode=AddManifestText(~\n~<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="24"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetApplicationAttribute(android:supportsRtl, "true")~\n~'End of default text.~\n~~\n~SetApplicationAttribute(android:theme, "@style/MyAppTheme")~\n~AddPermission("android.permission.INTERNET")~\n~SetActivityAttribute(main, android:windowSoftInputMode, adjustResize|stateHidden)~\n~AddManifestText(<uses-feature android:name="android.hardware.location.gps"/>)~\n~AddManifestText(<uses-feature android:name="android.hardware.camera"/>)~\n~CreateResource(values, themes.xml,~\n~<resources>~\n~    <style name="MyAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">~\n~        <item name="colorPrimary">#3598dc</item>~\n~        <item name="colorPrimaryDark">#3598dc</item>~\n~        <item name="colorAccent">#3598dc</item>~\n~        <item name="windowNoTitle">true</item>~\n~        <item name="windowActionBar">false</item>~\n~		<item name="windowActionModeOverlay">true</item>~\n~    </style>~\n~</resources>~\n~)~\n~'************ Google Play Services Base ************~\n~AddApplicationText(~\n~   <activity android:name="com.google.android.gms.common.api.GoogleApiActivity"~\n~  android:theme="@android:style/Theme.Translucent.NoTitleBar"~\n~  android:exported="false"/>~\n~    <meta-data~\n~  android:name="com.google.android.gms.version"~\n~  android:value="@integer/google_play_services_version" />~\n~)~\n~'************ Google Play Services Base (end) ************~\n~AddApplicationText(~\n~<meta-data~\n~  android:name="com.google.android.geo.API_KEY"~\n~  android:value="AIzaSyDXkCVe2LnBeA2YGjfXBkvXhJ_jeRdgqr0 "/>~\n~)
 IconFile=
-NumberOfFiles=0
-NumberOfLibraries=1
+NumberOfFiles=30
+File1=buzon.bal
+File2=companeros.bal
+File3=contacto.bal
+File4=generico.bal
+File5=googlemap.bal
+File6=gpmap.bal
+File7=ic_arrow_back_black_24dp.png
+File8=ic_arrow_back_white_24dp.png
+File9=ic_email_black_24dp.png
+File10=ic_home_black_24dp.png
+File11=ic_menu_white_24dp.png
+File12=ic_person_black_24dp.png
+File13=ic_priority_high_black_24dp.png
+File14=ic_send_black_24dp.png
+File15=ic_send_white_24dp.png
+File16=lateral.bal
+File17=logofondo.png
+File18=logologin.png
+File19=main.bal
+File20=mensaje.bal
+File21=mensaje_audio.bal
+File22=mensaje_plano.bal
+File23=mensaje_video.bal
+File24=principal.bal
+File25=prueba.bal
+File26=test.bal
+File27=usuario.png
+File28=vacio
+File29=vervideo.bal
+File30=vssver2.scc
+NumberOfLibraries=28
 Library1=core
+Library2=googlemaps
+Library3=googlemapsextras
+Library4=animation
+Library5=appcompat
+Library6=http
+Library7=javaobject
+Library8=ime
+Library9=json
+Library10=reflection
+Library11=audio
+Library12=byteconverter
+Library13=camera
+Library14=contentresolver
+Library15=designsupport
+Library16=encryption
+Library17=msmaterialdialogs
+Library18=okhttp
+Library19=okhttputils2
+Library20=phone
+Library21=randomaccessfile
+Library22=slidingmenuwrapper
+Library23=slidingpanels
+Library24=sql
+Library25=stringutils
+Library26=togglelibrary
+Library27=webviewextras
+Library28=xmllayoutbuilder
 @EndOfDesignText@
 #Region  Project Attributes 
 	#ApplicationLabel: MusicApp
@@ -17,7 +76,6 @@ Library1=core
 	#CanInstallToExternalStorage: False
 	'#AdditionalRes: ..\resource
     #AdditionalJar: com.google.android.gms:play-services-maps
-	#MultiDex : true
 	#Extends: android.support.v7.app.AppCompatActivity
 #End Region
 
@@ -41,7 +99,7 @@ End Sub
 Sub Activity_Create(FirstTime As Boolean)
 	'Do not forget to load the layout file created with the visual designer. For example:
 	'Activity.LoadLayout("Layout1")
-
+	StartActivity(googlemap)
 End Sub
 
 Sub Activity_Resume
