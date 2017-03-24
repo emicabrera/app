@@ -56,6 +56,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TriLibs, Version=1.1.6152.24708, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\TriLibs.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="main\clases\" />
@@ -87,9 +91,26 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="appClear.aspx" />
+    <Content Include="http\getCoordenadas.aspx" />
+    <Content Include="http\InsCoordenadas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="http\getCoordenadas.aspx.designer.vb">
+      <DependentUpon>getCoordenadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="http\getCoordenadas.aspx.vb">
+      <DependentUpon>getCoordenadas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="http\InsCoordenadas.aspx.designer.vb">
+      <DependentUpon>InsCoordenadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="http\InsCoordenadas.aspx.vb">
+      <DependentUpon>InsCoordenadas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -119,6 +140,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="applicationConstants.config" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

@@ -1,0 +1,10 @@
+D:\AndroidApps\App\app\Vb\bin\musicapp.dll.config
+D:\AndroidApps\App\app\Vb\bin\musicapp.dll
+D:\AndroidApps\App\app\Vb\bin\musicapp.pdb
+D:\AndroidApps\App\app\Vb\bin\musicapp.xml
+D:\AndroidApps\App\app\Vb\obj\Debug\musicapp.vbprojResolveAssemblyReference.cache
+D:\AndroidApps\App\app\Vb\obj\Debug\musicapp.Resources.resources
+D:\AndroidApps\App\app\Vb\obj\Debug\musicapp.vbproj.GenerateResource.Cache
+D:\AndroidApps\App\app\Vb\obj\Debug\musicapp.dll
+D:\AndroidApps\App\app\Vb\obj\Debug\musicapp.xml
+D:\AndroidApps\App\app\Vb\obj\Debug\musicapp.pdb
